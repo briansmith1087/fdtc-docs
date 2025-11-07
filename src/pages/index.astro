@@ -7,43 +7,20 @@
     <meta name="viewport" content="width=device-width" />
     <title>myFDTC Design System</title>
 
-    <!-- Load your CSS bundle -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/briansmith1087/myFDTC-Design-System@v0.1.1/dist/fdtc.css" />
+    <!-- Use the newest tag after you push (v0.1.2 below) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/briansmith1087/myFDTC-Design-System@v0.1.2/dist/fdtc.css" />
     <style>
-      /* Page scaffold: white background so DS elements pop */
-      body { margin: 0; background: #ffffff; color: #0b1620; font-family: Poppins, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
-      .container { max-width: 1100px; margin: 0 auto; padding: 0 16px 48px; }
-
-      /* Hero banner with image + overlay */
-      .hero {
-        position: relative;
-        min-height: 220px;
-        background-image:
-          linear-gradient(180deg, rgba(0,0,0,.25), rgba(0,0,0,.45)),
-          url("https://www.fdtc.edu/media/fdtc/about/our-mission-vision-and-history/MissionStatement_Hero-Image.jpg");
-        background-size: cover;
-        background-position: center;
-        border-bottom: 1px solid #e3e7ee;
-      }
-      .hero__inner {
-        height: 100%;
-        display: flex;
-        align-items: end;
-        padding: 24px 16px;
-      }
-      .hero__title {
-        color: #ffffff;
-        font-weight: 600;
-        font-size: 28px;
-        letter-spacing: .2px;
-        text-shadow: 0 1px 2px rgba(0,0,0,.35);
-      }
-
-      /* Section headings */
-      h2 { margin: 28px 0 12px; font-weight: 600; font-size: 20px; }
-
-      /* Simple grid for component demos */
-      .grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+      body{margin:0;background:#fff;color:#0b1620;font-family:Poppins,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+      .container{max-width:1100px;margin:0 auto;padding:0 16px 48px}
+      .hero{position:relative;min-height:220px;background-image:
+        linear-gradient(180deg,rgba(0,0,0,.25),rgba(0,0,0,.45)),
+        url("https://www.fdtc.edu/media/fdtc/about/our-mission-vision-and-history/MissionStatement_Hero-Image.jpg");
+        background-size:cover;background-position:center;border-bottom:1px solid #e3e7ee}
+      .hero__inner{height:100%;display:flex;align-items:end;padding:24px 16px}
+      .hero__title{color:#fff;font-weight:600;font-size:28px;letter-spacing:.2px;text-shadow:0 1px 2px rgba(0,0,0,.35)}
+      h2{margin:28px 0 12px;font-weight:600;font-size:20px}
+      .grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+      .demo-row{display:flex;gap:12px;flex-wrap:wrap}
     </style>
   </head>
   <body>
@@ -57,7 +34,7 @@
     <main class="container">
       <!-- Card demo -->
       <h2>Card + Surface</h2>
-      <div class="fdtc-card">
+      <div class="fdtc-card" style="position:relative">
         <div class="fdtc-card__header">
           <div class="fdtc-card__title">FDTC Card Header</div>
           <button class="fdtc-btn fdtc-btn--sm">Help</button>
@@ -66,41 +43,53 @@
           <div class="u-surface">This is a surface block inside the card body.</div>
         </div>
         <div class="fdtc-card__footer">
-          <button class="fdtc-btn fdtc-btn--accent">Advisors</button>
+          <button class="fdtc-btn fdtc-btn--accent">Drill-down</button>
           <button class="fdtc-btn">Primary</button>
+          <button class="fdtc-btn fdtc-btn--yellow">Yellow</button>
           <button class="fdtc-btn fdtc-btn--danger">Danger</button>
+          <button class="fdtc-btn fdtc-btn--link">Link</button>
+        </div>
+
+        <!-- Scroll hint sample -->
+        <div class="fdtc-scrollhint" aria-hidden="true">
+          <div class="fdtc-scrollhint__pill">
+            Scroll for more <span class="fdtc-scrollhint__chevron">▾</span>
+          </div>
         </div>
       </div>
 
       <!-- Buttons -->
       <h2>Buttons</h2>
-      <div class="grid">
-        <div class="u-surface">
-          <div class="u-gap-4 u-flex u-wrap">
-            <button class="fdtc-btn">Primary</button>
-            <button class="fdtc-btn fdtc-btn--accent">Accent</button>
-            <button class="fdtc-btn fdtc-btn--danger">Danger</button>
-            <button class="fdtc-btn fdtc-btn--sm">Small</button>
-            <button class="fdtc-btn fdtc-btn--primary fdtc-btn--lg">Large</button>
-          </div>
-        </div>
+      <div class="u-surface demo-row">
+        <button class="fdtc-btn">Primary</button>
+        <button class="fdtc-btn fdtc-btn--accent">Drill-down</button>
+        <button class="fdtc-btn fdtc-btn--yellow">Yellow</button>
+        <button class="fdtc-btn fdtc-btn--danger">Danger</button>
+        <button class="fdtc-btn fdtc-btn--link">Link</button>
+        <button class="fdtc-btn fdtc-btn--sm">Small</button>
+        <button class="fdtc-btn fdtc-btn--lg">Large</button>
       </div>
 
-      <!-- Utilities -->
-      <h2>Utilities (layout & spacing)</h2>
+      <!-- Gate + Back -->
+      <h2>Gate & Back</h2>
+      <div class="u-surface demo-row">
+        <button class="fdtc-gate fdtc-gate--blue">View Account Balance</button>
+        <button class="fdtc-gate fdtc-gate--orange">View Account Balance</button>
+        <button class="fdtc-back" type="button"><span aria-hidden="true">←</span>Back</button>
+      </div>
+
+      <!-- Term list rows -->
+      <h2>Term rows</h2>
       <div class="grid">
-        <div class="u-surface">
-          <div class="u-flex u-items-center u-justify-between">
-            <div>Left</div>
-            <div>Right</div>
-          </div>
-        </div>
-        <div class="u-surface">
-          <div class="u-flex u-flex-col u-gap-4">
-            <div class="u-surface">Stack item 1</div>
-            <div class="u-surface">Stack item 2</div>
-          </div>
-        </div>
+        <button class="fdtc-term fdtc-term--ok">
+          <div>Fall 24-25</div><div>$1,234.56</div>
+        </button>
+        <button class="fdtc-term fdtc-term--overdue">
+          <div>Summer 24-25</div><div>$678.00</div>
+        </button>
+        <button class="fdtc-term fdtc-term--total">
+          <div>Total Balance</div><div>$1,912.56</div>
+        </button>
       </div>
     </main>
   </body>
