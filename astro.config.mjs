@@ -1,5 +1,6 @@
-// @ts-check
 import { defineConfig } from 'astro/config';
 
-// https://astro.build/config
-export default defineConfig({});
+export default defineConfig({
+    site: 'https://briansmith1087.github.io/fdtc-docs/',
+    outDir: 'docs' // emit static site to /docs for GitHub Pages
+});
