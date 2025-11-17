@@ -34,92 +34,71 @@
       </div>
     </header>
 
-    <main class="container">
-      <!-- Card demo -->
-      <h2>Card + Surface</h2>
-      <div class="fdtc-card" style="position: relative">
-        <div class="fdtc-card__header">
-          <div class="fdtc-card__title">FDTC Card Header</div>
-          <button class="fdtc-btn fdtc-btn--sm">Help</button>
-        </div>
-        <div class="fdtc-card__body">
-          <div class="u-surface">This is a surface block inside the card body.</div>
-        </div>
-        <div class="fdtc-card__footer">
-          <button class="fdtc-btn fdtc-btn--accent">Drill-down</button>
-          <button class="fdtc-btn">Primary</button>
-          <button class="fdtc-btn fdtc-btn--yellow">Yellow</button>
-          <button class="fdtc-btn fdtc-btn--danger">Danger</button>
-          <button class="fdtc-btn fdtc-btn--link">Link</button>
-        </div>
+	<main class="container">
 
-        <!-- Scroll hint sample -->
-        <div class="fdtc-scrollhint" aria-hidden="true">
-          <div class="fdtc-scrollhint__pill">
-            Scroll for more <span class="fdtc-scrollhint__chevron">▾</span>
-          </div>
-        </div>
-      </div>
+		<h2 id="card">Card</h2>
+		<div class="fdtc-card" style="position: relative">
+			<div class="fdtc-card__header">
+				<div class="fdtc-card__title">FDTC Card Header</div>
+				<button class="fdtc-btn fdtc-btn--sm">Help</button>
+			</div>
+			<div class="fdtc-card__body">
+				<div class="u-surface">Surface area inside the card body.</div>
+			</div>
+			<div class="fdtc-card__footer">
+				<button class="fdtc-btn fdtc-btn--accent">Drill-down</button>
+				<button class="fdtc-btn">Primary</button>
+				<button class="fdtc-btn fdtc-btn--yellow">Yellow</button>
+				<button class="fdtc-btn fdtc-btn--danger">Danger</button>
+				<button class="fdtc-btn fdtc-btn--link">Link</button>
+			</div>
+			<div class="fdtc-scrollhint" aria-hidden="true">
+				<div class="fdtc-scrollhint__pill">
+					Scroll for more <span class="fdtc-scrollhint__chevron">▾</span>
+				</div>
+			</div>
+		</div>
 
-      <!-- Buttons -->
-      <h2>Buttons</h2>
-      <div class="u-surface demo-row">
-        <button class="fdtc-btn">Primary</button>
-        <button class="fdtc-btn fdtc-btn--accent">Drill-down</button>
-        <button class="fdtc-btn fdtc-btn--yellow">Yellow</button>
-        <button class="fdtc-btn fdtc-btn--danger">Danger</button>
-        <button class="fdtc-btn fdtc-btn--link">Link</button>
-        <button class="fdtc-btn fdtc-btn--sm">Small</button>
-        <button class="fdtc-btn fdtc-btn--lg">Large</button>
-      </div>
+		<h2 id="buttons">Buttons</h2>
+		<div class="u-surface demo-row">
+			<button class="fdtc-btn">Primary</button>
+			<button class="fdtc-btn fdtc-btn--accent">Drill-down</button>
+			<button class="fdtc-btn fdtc-btn--yellow">Yellow</button>
+			<button class="fdtc-btn fdtc-btn--danger">Danger</button>
+			<button class="fdtc-btn fdtc-btn--link">Link</button>
+			<button class="fdtc-btn fdtc-btn--sm">Small</button>
+			<button class="fdtc-btn fdtc-btn--lg">Large</button>
+		</div>
 
-      <!-- Gate + Back -->
-      <h2>Gate & Back</h2>
-      <div class="u-surface demo-row">
-        <button class="fdtc-gate fdtc-gate--blue">View Account Balance</button>
-        <button class="fdtc-gate fdtc-gate--orange">View Account Balance</button>
-        <button class="fdtc-back" type="button"><span aria-hidden="true">←</span> Back</button>
-      </div>
+		<h2 id="gate-back">Gate & Back</h2>
+		<div class="u-surface demo-row">
+			<button class="fdtc-gate fdtc-gate--blue">View Account Balance</button>
+			<button class="fdtc-gate fdtc-gate--orange">View Account Balance</button>
+			<button class="fdtc-back" type="button"><span aria-hidden="true">←</span> Back</button>
+			<button class="fdtc-iconbtn" aria-label="Back">←</button>
+		</div>
 
-      <!-- Term list rows -->
-      <h2>Term rows</h2>
-      <div class="grid">
-        <button class="fdtc-term fdtc-term--ok">
-          <div>Fall 24-25</div>
-          <div>$1,234.56</div>
-        </button>
-        <button class="fdtc-term fdtc-term--overdue">
-          <div>Summer 24-25</div>
-          <div>$678.00</div>
-        </button>
-        <button class="fdtc-term fdtc-term--total">
-          <div>Total Balance</div>
-          <div>$1,912.56</div>
-        </button>
-      </div>
+		<h2 id="category-soft">Category / Soft button</h2>
+		<div class="u-surface demo-row">
+			<button class="fdtc-btn fdtc-btn--soft">Category A</button>
+			<button class="fdtc-btn fdtc-btn--soft">Category B</button>
+		</div>
 
-      <!-- Employee Links layout -->
-      <h2>Employee Links layout</h2>
-      <div class="u-surface" style="padding: 12px">
-        <div class="u-grid-2">
-          <!-- Row header (Back + gold pill) -->
-          <div class="u-col-span-full u-center u-gap-2">
-            <button class="fdtc-iconbtn" aria-label="Back">←</button>
-            <div class="fdtc-pill" style="min-width: 180px;">HR &amp; Payroll</div>
-          </div>
+		<h2 id="term-rows">Term rows</h2>
+		<div class="grid">
+			<button class="fdtc-term fdtc-term--ok"><div>Fall 24-25</div><div>$1,234.56</div></button>
+			<button class="fdtc-term fdtc-term--overdue"><div>Summer 24-25</div><div>$678.00</div></button>
+			<button class="fdtc-term fdtc-term--total"><div>Total Balance</div><div>$1,912.56</div></button>
+		</div>
 
-          <!-- Category buttons (soft) -->
-          <button class="fdtc-btn fdtc-btn--soft u-w-full">Category A</button>
-          <button class="fdtc-btn fdtc-btn--soft u-w-full">Category B</button>
+		<h2 id="utilities">Utilities</h2>
+		<div class="grid">
+			<div class="u-surface"><div class="u-center" style="height:56px">.u-center</div></div>
+			<div class="u-surface"><div class="u-wrap u-center" style="height:56px">.u-wrap</div></div>
+			<div class="u-surface"><div class="u-grid-2" style="gap:.5rem"><div class="u-surface">1</div><div class="u-surface">2</div></div></div>
+		</div>
 
-          <!-- Link buttons (primary) -->
-          <a class="fdtc-btn u-w-full" href="#">Self-Service Home</a>
-          <a class="fdtc-btn u-w-full" href="#">NEOED</a>
+	</main>
 
-          <!-- Link-like text button -->
-          <button class="fdtc-btn--link">Link</button>
-        </div>
-      </div>
-    </main>
   </body>
 </html>
